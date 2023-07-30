@@ -1,0 +1,596 @@
+create database learn;
+use learn;
+CREATE TABLE departments
+   ( department_id integer(4)
+   , department_name varchar(30) NOT NULL
+   , manager_id integer(6)
+   , location_id integer(4)
+   ) ;
+   
+CREATE TABLE employees
+   ( employee_id integer(6)
+   , first_name varchar(20)
+   , last_name varchar(25) NOT NULL
+   , email varchar(25) NOT NULL
+   , phone_integer varchar(20)
+   , hire_date DATE NOT NULL
+   , job_id varchar(10) NOT NULL
+   , salary integer(8)
+   , commission_pct integer(2)
+   , manager_id integer(6)
+   , department_id integer(4)
+   ) ;
+   
+INSERT INTO departments VALUES 
+   ( 10
+   , 'Administration'
+   , 200
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 20
+   , 'Marketing'
+   , 201
+   , 1800
+   );
+   
+   INSERT INTO departments VALUES 
+   ( 30
+   , 'Purchasing'
+   , 114
+   , 1700
+   );
+   
+   INSERT INTO departments VALUES 
+   ( 40
+   , 'Human Resources'
+   , 203
+   , 2400
+   );
+INSERT INTO departments VALUES 
+   ( 50
+   , 'Shipping'
+   , 121
+   , 1500
+   );
+   
+   INSERT INTO departments VALUES 
+   ( 60 
+   , 'IT'
+   , 103
+   , 1400
+   );
+   
+   INSERT INTO departments VALUES 
+   ( 70 
+   , 'Public Relations'
+   , 204
+   , 2700
+   );
+   
+   INSERT INTO departments VALUES 
+   ( 80 
+   , 'Sales'
+   , 145
+   , 2500
+   );
+   
+   INSERT INTO departments VALUES 
+   ( 90 
+   , 'Executive'
+   , 100
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 100 
+   , 'Finance'
+   , 108
+   , 1700
+   );
+   
+   INSERT INTO departments VALUES 
+   ( 110 
+   , 'Accounting'
+   , 205
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 120 
+   , 'Treasury'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 130 
+   , 'Corporate Tax'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 140 
+   , 'Control And Credit'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 150 
+   , 'Shareholder Services'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 160 
+   , 'Benefits'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 170 
+   , 'Manufacturing'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 180 
+   , 'Construction'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 190 
+   , 'Contracting'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 200 
+   , 'Operations'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 210 
+   , 'IT Support'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 220 
+   , 'NOC'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 230 
+   , 'IT Helpdesk'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 240 
+   , 'Government Sales'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 250 
+   , 'Retail Sales'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 260 
+   , 'Recruiting'
+   , NULL
+   , 1700
+   );
+INSERT INTO departments VALUES 
+   ( 270 
+   , 'Payroll'
+   , NULL
+   , 1700
+   );
+
+INSERT INTO employees VALUES 
+   ( 100
+   , 'Steven'
+   , 'King'
+   , 'SKING'
+   , '515.123.4567'
+   , '1987-06-17'
+   , 'AD_PRES'
+   , 24000
+   , NULL
+   , NULL
+   , 90
+   );
+INSERT INTO employees VALUES 
+   ( 101
+   , 'Neena'
+   , 'Kochhar'
+   , 'NKOCHHAR'
+   , '515.123.4568'
+   , '1989-09-19'
+   , 'AD_VP'
+   , 17000
+   , NULL
+   , 100
+   , 90
+   );
+INSERT INTO employees VALUES 
+   ( 102
+   , 'Lex'
+   , 'De Haan'
+   , 'LDEHAAN'
+   , '515.123.4569'
+   , '1993-01-03'
+   , 'AD_VP'
+   , 17000
+   , NULL
+   , 100
+   , 90
+   );
+INSERT INTO employees VALUES 
+   ( 103
+   , 'Alexander'
+   , 'Hunold'
+   , 'AHUNOLD'
+   , '590.423.4567'
+   , '1990-01-03'
+   , 'IT_PROG'
+   , 9000
+   , NULL
+   , 102
+   , 60
+   );
+INSERT INTO employees VALUES 
+   ( 104
+   , 'Bruce'
+   , 'Ernst'
+   , 'BERNST'
+   , '590.423.4568'
+   , '1991-05-15'
+   , 'IT_PROG'
+   , 6000
+   , NULL
+   , 103
+   , 60
+   );
+INSERT INTO employees VALUES 
+   ( 105
+   , 'David'
+   , 'Austin'
+   , 'DAUSTIN'
+   , '590.423.4569'
+   , '1997-06-12'
+   , 'IT_PROG'
+   , 4800
+   , NULL
+   , 103
+   , 60
+   );
+INSERT INTO employees VALUES 
+   ( 106
+   , 'Valli'
+   , 'Pataballa'
+   , 'VPATABAL'
+   , '590.423.4560'
+   , '1998-02-06'
+   , 'IT_PROG'
+   , 4800
+   , NULL
+   , 103
+   , 60
+   );
+INSERT INTO employees VALUES 
+   ( 107
+   , 'Diana'
+   , 'Lorentz'
+   , 'DLORENTZ'
+   , '590.423.5567'
+   , '1999-02-21'
+   , 'IT_PROG'
+   , 4200
+   , NULL
+   , 103
+   , 60
+   );
+INSERT INTO employees VALUES 
+   ( 108
+   , 'Nancy'
+   , 'Greenberg'
+   , 'NGREENBE'
+   , '515.124.4569'
+   , '1994-08-07'
+   , 'FI_MGR'
+   , 12000
+   , NULL
+   , 101
+   , 100
+   );
+INSERT INTO employees VALUES 
+   ( 109
+   , 'Daniel'
+   , 'Faviet'
+   , 'DFAVIET'
+   , '515.124.4169'
+   , '1994-08-10'
+   , 'FI_ACCOUNT'
+   , 9000
+   , NULL
+   , 108
+   , 100
+   );
+INSERT INTO employees VALUES 
+   ( 110
+   , 'John'
+   , 'Chen'
+   , 'JCHEN'
+   , '515.124.4269'
+   , '1997-09-24'
+   , 'FI_ACCOUNT'
+   , 8200
+   , NULL
+   , 108
+   , 100
+   );
+INSERT INTO employees VALUES 
+   ( 111
+   , 'Ismael'
+   , 'Sciarra'
+   , 'ISCIARRA'
+   , '515.124.4369'
+   , '1997-09-16'
+   , 'FI_ACCOUNT'
+   , 7700
+   , NULL
+   , 108
+   , 100
+   );
+INSERT INTO employees VALUES 
+   ( 112
+   , 'Jose Manuel'
+   , 'Urman'
+   , 'JMURMAN'
+   , '515.124.4469'
+   , '1988-03-13'
+   , 'FI_ACCOUNT'
+   , 7800
+   , NULL
+   , 108
+   , 100
+   );
+INSERT INTO employees VALUES 
+   ( 113
+   , 'Luis'
+   , 'Popp'
+   , 'LPOPP'
+   , '515.124.4567'
+   , '1980-08-13'
+   , 'FI_ACCOUNT'
+   , 6900
+   , NULL
+   , 108
+   , 100
+   );
+INSERT INTO employees VALUES 
+   ( 114
+   , 'Den'
+   , 'Raphaely'
+   , 'DRAPHEAL'
+   , '515.127.4561'
+   , '1977-05-27'
+   , 'PU_MAN'
+   , 11000
+   , NULL
+   , 100
+   , 30
+   );
+INSERT INTO employees VALUES 
+   ( 115
+   , 'Alexander'
+   , 'Khoo'
+   , 'AKHOO'
+   , '515.127.4562'
+   , '2016-08-18'
+   , 'PU_CLERK'
+   , 3100
+   , NULL
+   , 114
+   , 30
+   );
+INSERT INTO employees VALUES 
+   ( 116
+   , 'Shelli'
+   , 'Baida'
+   , 'SBAIDA'
+   , '515.127.4563'
+   , '2012-08-31'
+   , 'PU_CLERK'
+   , 2900
+   , NULL
+   , 114
+   , 30
+   );
+INSERT INTO employees VALUES 
+   ( 117
+   , 'Sigal'
+   , 'Tobias'
+   , 'STOBIAS'
+   , '515.127.4564'
+   , '2008-08-12'
+   , 'PU_CLERK'
+   , 2800
+   , NULL
+   , 114
+   , 30
+   );
+INSERT INTO employees VALUES 
+   ( 118
+   , 'Guy'
+   , 'Himuro'
+   , 'GHIMURO'
+   , '515.127.4565'
+   , '1998-11-04'
+   , 'PU_CLERK'
+   , 2600
+   , NULL
+   , 114
+   , 30
+   );
+INSERT INTO employees VALUES 
+   ( 119
+   , 'Karen'
+   , 'Colmenares'
+   , 'KCOLMENA'
+   , '515.127.4566'
+   , '1985-04-11'
+   , 'PU_CLERK'
+   , 2500
+   , NULL
+   , 114
+   , 30
+   );
+INSERT INTO employees VALUES 
+   ( 120
+   , 'Matthew'
+   , 'Weiss'
+   , 'MWEISS'
+   , '650.123.1234'
+   , '1985-07-18'
+   , 'ST_MAN'
+   , 8000
+   , NULL
+   , 100
+   , 50
+   );
+INSERT INTO employees VALUES 
+   ( 121
+   , 'Adam'
+   , 'Fripp'
+   , 'AFRIPP'
+   , '650.123.2234'
+   , '1995-12-12'
+   , 'ST_MAN'
+   , 8200
+   , NULL
+   , 100
+   , 50
+   );
+INSERT INTO employees VALUES 
+   ( 122
+   , 'Payam'
+   , 'Kaufling'
+   , 'PKAUFLIN'
+   , '650.123.3234'
+   , '1996-07-07'
+   , 'ST_MAN'
+   , 7900
+   , NULL
+   , 100
+   , 50
+   );
+INSERT INTO employees VALUES 
+   ( 123
+   , 'Shanta'
+   , 'Vollman'
+   , 'SVOLLMAN'
+   , '650.123.4234'
+   , '1997-08-29'
+   , 'ST_MAN'
+   , 6500
+   , NULL
+   , 100
+   , 50
+   );
+INSERT INTO employees VALUES 
+   ( 124
+   , 'Kevin'
+   , 'Mourgos'
+   , 'KMOURGOS'
+   , '650.123.5234'
+   , '2022-06-27'
+   , 'ST_MAN'
+   , 5800
+   , NULL
+   , 100
+   , 50
+   );
+INSERT INTO employees VALUES 
+   ( 125
+   , 'Julia'
+   , 'Nayer'
+   , 'JNAYER'
+   , '650.124.1214'
+   , '1997-07-14'
+   , 'ST_CLERK'
+   , 3200
+   , NULL
+   , 120
+   , 50
+   );
+INSERT INTO employees VALUES 
+   ( 126
+   , 'Irene'
+   , 'Mikkilineni'
+   , 'IMIKKILI'
+   , '650.124.1224'
+   , '1998-05-05'
+   , 'ST_CLERK'
+   , 2700
+   , NULL
+   , 120
+   , 50
+   );
+INSERT INTO employees VALUES 
+   ( 127
+   , 'James'
+   , 'Landry'
+   , 'JLANDRY'
+   , '650.124.1334'
+   , '1999-02-03'
+   , 'ST_CLERK'
+   , 2400
+   , NULL
+   , 120
+   , 50
+   );
+INSERT INTO employees VALUES 
+   ( 128
+   , 'Steven'
+   , 'Markle'
+   , 'SMARKLE'
+   , '650.124.1434'
+   , '2000-04-30'
+   , 'ST_CLERK'
+   , 2200
+   , NULL
+   , 120
+   , 50
+   );
+INSERT INTO employees VALUES 
+   ( 129
+   , 'Laura'
+   , 'Bissot'
+   , 'LBISSOT'
+   , '650.124.5234'
+   , '1997-08-09'
+   , 'ST_CLERK'
+   , 3300
+   , NULL
+   , 121
+   , 50
+   );
+INSERT INTO employees VALUES 
+   ( 130
+   , 'Mozhe'
+   , 'Atkinson'
+   , 'MATKINSO'
+   , '650.124.6234'
+   , '2001-07-18'
+   , 'ST_CLERK'
+   , 2800
+   , NULL
+   , 121
+   , 50
+   );
