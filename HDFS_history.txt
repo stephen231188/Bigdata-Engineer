@@ -1,0 +1,188 @@
+  302  tar xvzf hadoop-2.7.1.tar.gz
+  303  sudo mv hadoop-2.7.1 /usr/local/hadoop
+  304  sudo chown -R hduser:hadoop /usr/local/hadoop
+  305  echo 'export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_71' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+  306  sudo mkdir -p /usr/local/hadoop_store/tmp
+  307  sudo mkdir -p /usr/local/hadoop_store/hdfs/namenode
+  308  sudo mkdir -p /usr/local/hadoop_store/hdfs/datanode
+  309  sudo mkdir -p /usr/local/hadoop_store/hdfs/secondarynamenode
+  310  sudo chown -R hduser:hadoop /usr/local/hadoop_store
+  311  cp /usr/local/hadoop/etc/hadoop/mapred-site.xml.template /usr/local/hadoop/etc/hadoop/mapred-site.xml
+  312  sudo vi /usr/local/hadoop/etc/hadoop/mapred-site.xml
+  313  sudo vi /usr/local/hadoop/etc/hadoop/core-site.xml
+  314  sudo vi /usr/local/hadoop/etc/hadoop/hdfs-site.xml
+  315  sudo vi /usr/local/hadoop/etc/hadoop/yarn-site.xml
+  316  hadoop namenode -format
+  317  cd /etc/hostname
+  318  cd /etc/hosts
+  319  Edit /etc/hosts
+  320  vi /etc/hosts
+  321  cd install
+  322  vi /etc/hosts
+  323  sudo vi /etc/hosts
+  324  hadoop namenode -format
+  325  start-all.sh
+  326  jps
+  327  cd /usr/local
+  328  ls
+  329  sudo rm -r hadoop
+  330  ls
+  331  sudo rm -r hadoop_store/
+  332  ls
+  333  cd ~
+  334  vi /etc/hosts
+  335  cd install
+  336  tar xvzf hadoop-2.7.1.tar.gz
+  337  cd /usr/local
+  338  ls
+  339  cd /usr/local
+  340  ls
+  341  $JAVA_HOME$
+  342  java -version
+  343  cat filename
+  344  vi .bashrc
+  345  cd ~
+  346  pwd
+  347  ls -lart
+  348  echo "hello" > testfile
+  349  hadoop fs -put testfile /tmp/
+  350  hadoop fs -cat /tmp/testfile
+  351  cd /usr/local/hadoop_store/hdfs/namenode/current/
+  352  pwd
+  353  ls -lart
+  354  pwd
+  355  date
+  356  ls -lart
+  357  date
+  358  ls -lart
+  359  cat seen_txid
+  360  pwd
+  361  cd ../../secondarynamenode/current/
+  362  ls -lart
+  363  date
+  364  history >> histhdfs3
+  365  pwd
+  366  cd ~
+  367  pqd
+  368  pwd
+  369  hadoop fs -mkdir testing
+  370  hadoop fs -ls /user/hduser
+  371  hadoop fs -rmdir /user/hduser/testing
+  372  cd ~
+  373  echo testdata > test.txt
+  374  hadoop fs -mkdir /user/hduser/testing
+  375  pwd
+  376  hadoop fs -copyFromLocal ~/test.txt /user/hduser/testing/
+  377  hadoop fs -cat /user/hduser/testing/test.txt
+  378  hadoop fs -rm -r /user/hduser/testing
+  379  hadoop fs -moveFromLocal ~/test.txt /user/hduser/test.txt
+  380  ls -lart test.txt
+  381  echo somedata > test1.txt
+  382  hadoop fs -appendToFile test1.txt /user/hduser/testing/test.txt
+  383  hadoop fs -ls /user/hduser/testing/test.txt
+  384  date
+  385  hadoop fs -cat /user/hduser/test.txt
+  386  hadoop fs -appendToFile test1.txt /user/hduser/test.txt
+  387  hadoop fs -cat /user/hduser/test.txt
+  388  pwd
+  389  echo dataset1 > day1.txt
+  390  hadoop fs -put day1.txt dailydata.txt
+  391  echo dataset2 > day2.txt
+  392  hadoop fs -appendToFile day2.txt /user/hduser/dailydata.txt
+  393  hadoop fs -cat /user/hduser/dailydata.txt
+  394  hadoop fs -touchz text.txt
+  395  hadoop fs -ls text.txt
+  396  hadoop version
+  397  hadoop fs -df hdfs:/
+  398  hadoop fs -count hdfs:/
+  399  hadoop fs -mkdir /user/hduser/hadoop
+  400  echo "sampledata" > sample.txt
+  401  hadoop fs -put ~/sample.txt /user/hduser/hadoop
+  402  hadoop fs -ls /user/hduser/hadoop
+  403* hadoop fs -touchz /hadoop/sample1.txt
+  404  hadoop fs -ls /user/hduser/hadoop
+  405  hadoop fs -ls /user/hduser/hadoop | wc -l
+  406  ls -lart /home/hduser/mrdata
+  407  hadoop fs -put /home/hduser/mrdata /user/hduser/hadoop
+  408  hadoop fs -ls hadoop
+  409  hadoop fs -copyFromLocal test1.txt hadoop/
+  410  hadoop fs -rm hadoop/test1.txt
+  411  hadoop fs -mkdir hadoop/test
+  412  hadoop fs -touchz hadoop/test/file1
+  413  hadoop fs -put test1.txt hadoop/test/
+  414  hadoop fs -rm hadoop/test
+  415  hadoop fs -rmr hadoop/test
+  416  hadoop fs -ls hadoop/test
+  417  hadoop fs -copyToLocal test.txt /tmp
+  418  ls -lart /tmp/test.txt
+  419  date
+  420  hadoop fs -copyToLocal test.txt /tmp
+  421  hadoop fs -copyToLocal test.txt /tmp/testhdfs.txt
+  422  hadoop fs -put test1.txt 
+  423  hadoop fs -vi test1.txt
+  424  hadoop fs -cat test1.txt | vi
+  425  hadoop fs -cat test1.txt >> abc
+  426  vi abc
+  427  rm test1.txt 
+  428  hadoop fs -get test1.txt
+  429  vi test1.txt 
+  430  hadoop fs -rm test1.txt
+  431  hadoop fs -put test1.txt
+  432  hadoop fs -ls hadoop/*.txt
+  433  hadoop fs -rm hadoop/*.txt
+  434  hadoop fs -ls hadoop/*.txt
+  435  hadoop fs -cp /user/hduser/test.txt /user/hduser/test2.txt
+  436  hadoop fs -mv /user/hduser/test.txt /user/hduser/test3.txt
+  437  hadoop fs -ls test*
+  438  hadoop fs -ls /user/hduser/test2.txt
+  439  hadoop fs -ls /user/hduser/test*.txt
+  440  hadoop fs -get test2.txt /home/hduser/test3.txt
+  441  pwd
+  442  ls -lart test3.txt
+  443  date
+  444  hadoop fs -put filename
+  445  hadoop fs -tail filename
+  446  hadoop fs -tail filename | tail -2
+  447  hadoop fs -head filename
+  448  hadoop fs -cat filename | head -2
+  449  hadoop fs -cat filename | head -10
+  450  hadoop fs -cat filename | head -10 >> a.txt
+  451  cat a.txt
+  452  hadoop fs -touchz hadoop/test4.txt
+  453  hadoop fs -ls hadoop/test4.txt
+  454  hadoop fs -chmod 600 hadoop/test4.txt
+  455  hadoop fs -ls hadoop/test4.txt
+  456  hadoop fs -mkdir /user/inceptez
+  457  hadoop fs -chmod -R 777 /user/inceptez
+  458  hadoop fs -du -s -h hadoop
+  459  hadoop fs -du -s -h hadoop/*
+  460  hadoop fs -du -s -h hadoop/mrdata/*
+  461  hadoop fsck - /
+  462  hadoop balancer
+  463  hadoop fs -ls test2.txt
+  464  sudo adduser hdfs
+  465  hadoop fs -ls test2.txt
+  466  hadoop fs -chown hdfs:hdfs test2.txt
+  467  hadoop fs -ls test2.txt
+  468  hadoop fs -chgrp hadoop test2.txt
+  469  hadoop fs -ls test2.txt
+  470  hadoop fs -setrep -w 2 test2.txt
+  471  hadoop fs -stat %r test2.txt
+  472  hadoop fs -setrep -w 1 test2.txt
+  473  hadoop fs -stat %r test2.txt
+  474  cd /usr/local/hadoop_store/hdfs/namenode/current
+  475  ls -lart
+  476  stop-all.sh
+  477  start-all.sh
+  478  jps
+  479  ls -lart
+  480  cd ~
+  481  pwd
+  482  hadoop fs -put test3.txt /user/hduser/test11
+  483  hdfs dfsadmin -safemode leave
+  484  hadoop fs -put test3.txt /user/hduser/test11
+  485  hadoop namenode -recover -force
+  486  hdfs dfsadmin -safemode leave
+  487  jps
+  488  history
+  489  history | tail -188 > hdfshistory2

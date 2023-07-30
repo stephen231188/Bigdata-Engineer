@@ -1,0 +1,161 @@
+ 1001  ls
+ 1002  ls -l
+ 1003  ls -ltr
+ 1004  ls -lt
+ 1005  ls -ltr
+ 1006  ls -lrt
+ 1007  echo hello >> abc
+ 1008  ls -lrt
+ 1009  cat abc
+ 1010  touch .abc
+ 1011  ls -lrt
+ 1012  ls -lart
+ 1013  vi irfan
+ 1014  echo "welcome to iz"
+ 1015  echo "welcome to iz" > filename1
+ 1016  cat filename1
+ 1017  echo "welcome to new center" >> filename1
+ 1018  cat filename1
+ 1019  echo "welcome to new center" > filename1
+ 1020  cat filename1
+ 1021  touch filename2
+ 1022  ls -lart filename2
+ 1023  ls -lart
+ 1024  touch filename1
+ 1025  ls -lart
+ 1026  > filename
+ 1027  > filename1
+ 1028  ls -lart
+ 1029  hadoop fs -ls filename*
+ 1030  hadoop fs -get filename .
+ 1031  rm filename
+ 1032  hadoop fs -get filename .
+ 1033  cat filename
+ 1034  more filename
+ 1035  head filename
+ 1036  head -2 filename
+ 1037  tail -2 filename
+ 1038  head filename > filename10
+ 1039  cat filename10
+ 1040  head -15 filename | tail -5
+ 1041  head -15 filename | tail -5 > filename10
+ 1042  cat filename10
+ 1043  wc -l filename
+ 1044  wc  filename
+ 1045  wc -c filename
+ 1046  wc -w filename
+ 1047  head -14 filename | tail -3 | wc -w 
+ 1048  cp filename file2
+ 1049  ls -lart
+ 1050  mv file2 file3
+ 1051  ls -lart
+ 1052  mv file3 /tmp/
+ 1053  rm /tmp/file3
+ 1054  rm -f /tmp/file3
+ 1055  history >> ~/historySept
+ 1056  jps
+ 1057  hive --service metastore
+ 1058  rm fillll
+ 1059  rm -f fillll
+ 1060  cd ~
+ 1061  pwd
+ 1062  cd /
+ 1063  pwd
+ 1064  cd ~
+ 1065  pwd
+ 1066  cd /
+ 1067  pwd
+ 1068  cd ~
+ 1069  pwd
+ 1070  cd /tmp
+ 1071  pwd
+ 1072  wc -l ~/filename
+ 1073  cd ~
+ 1074  pwd
+ 1075  mkdir sdir1
+ 1076  cd /tmp
+ 1077  pwd
+ 1078  ls -lart ~/sdir1
+ 1079  pwd
+ 1080  vi ls
+ 1081  ls
+ 1082  bash ./ls
+ 1083  ./ls
+ 1084  chmod 777 ls
+ 1085  ./ls
+ 1086  vi ls
+ 1087  ./ls
+ 1088  ls
+ 1089  cd ~/sdir1/
+ 1090  pwd
+ 1091  cat ../filename
+ 1092  cd /tmp
+ 1093  pwd
+ 1094  cd -
+ 1095  cd ../..
+ 1096  pwd
+ 1097  cd -
+ 1098  cd ~irfan
+ 1099  cd ~
+ 1100  pwd
+ 1101  mkdir dirname
+ 1102  pwd
+ 1103  cd dirname
+ 1104  pwd
+ 1105  cd ..
+ 1106  cd /tmp
+ 1107  pwd
+ 1108  cd /home/hduser/dirname
+ 1109  pwd
+ 1110  mkdir /home/hduser/dirname2
+ 1111  mkdir /home/hduser/dirname3
+ 1112  mkdir /home/hduser/dirname4
+ 1113  mkdir /home/hduser/dirname5
+ 1114  mkdir home/hduser/dirname5
+ 1115  mkdir -p home/hduser/dirname5
+ 1116  cd home/hduser/dirname5
+ 1117  pwc
+ 1118  pwd
+ 1119  touch samplefile
+ 1120  pwd
+ 1121  cd ~
+ 1122  mkdir dirname5
+ 1123  ls dirname5
+ 1124  pwd
+ 1125  cd /tmp
+ 1126  cd /home/hduser/dirname5
+ 1127  pwd
+ 1128  cd ..
+ 1129  pwd
+ 1130  cd dirname
+ 1131  ls home/hduser/dirname5/
+ 1132  ls /home/hduser/dirname5/
+ 1133  touch /home/hduser/dirname5/homefile
+ 1134  pwd
+ 1135  ls -lart
+ 1136  ls home/hduser/dirname5/
+ 1137  ls /home/hduser/dirname5/
+ 1138  cd /tmp
+ 1139  ls /home/hduser/dirname5/
+ 1140  ls home/hduser/dirname5/
+ 1141  cd ~
+ 1142  pwd
+ 1143  ls dirname
+ 1144  rm -r dirname1
+ 1145  pwd
+ 1146  mv dirname dirname1
+ 1147  ls dirname
+ 1148  ls dirname1
+ 1149  rmdir ~/dirname1
+ 1150  rm -rf ~/dirname1
+ 1151  mkdir dirname1
+ 1152  rmdir ~/dirname1
+ 1153  cat /etc/passwd | grep inceptez
+ 1154  cat /etc/passwd | grep irfan
+ 1155  cat /etc/passwd | grep basith
+ 1156  sudo useradd inceptez
+ 1157  sudo useradd inceptez3
+ 1158  cat /etc/passwd | grep inceptez3
+ 1159  id inceptez3
+ 1160  sudo passwd inceptez3
+
