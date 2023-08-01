@@ -1,0 +1,1006 @@
+  998  ls -l
+  999  pwd
+ 1000  ls -lr
+ 1001  ls -lrt
+ 1002  ls -lart
+ 1003  cat .hivehistory
+ 1004  ls -lrt
+ 1005  ls -lart
+ 1006  ls -lrt moh*
+ 1007  touch mohamed
+ 1008  ls -lrt moh*
+ 1009  touch mohamedirfan
+ 1010  ls -lrt moh*
+ 1011  ls -l moh*
+ 1012  ls moh*
+ 1013  echo hello>mohamedirfan
+ 1014  echo hello>mohamedirfanfile
+ 1015  ls -lrt moh*
+ 1016  ls -lrt *.txt
+ 1017  ls -lrt
+ 1018  ls -lrt moh*
+ 1019  ls -lat
+ 1020  ls -lart
+ 1021  ls -lSr #files sorted based on size in ascending order
+ 1022  cd /tmp
+ 1023  pwd
+ 1024  ls -lSr | tail -5
+ 1025  cd ~
+ 1026  ls -lSr | tail -5
+ 1027  ls -F
+ 1028  ls
+ 1029  ls | wc -l
+ 1030  touch vinoth
+ 1031  ls | wc -l
+ 1032  ls -F
+ 1033  ls -F | grep */
+ 1034  ls -F | grep /*
+ 1035  ls -F
+ 1036  ls -F | grep "*/*
+ 1037  ls -F | grep "*/"
+ 1038  ls -F | grep -v */
+ 1039  ls -F | grep /
+ 1040  ls -F | grep -v /
+ 1041  ls -F | grep -v / | wc -l
+ 1042  ls -F | grep / | wc -l
+ 1043  ls -F | wc -l
+ 1044  echo "hello we41 team"
+ 1045  echo 'hello we41 team'
+ 1046  echo hello we41 team
+ 1047  echo hello we41 team | grep hello | wc -l
+ 1048  echo hello we41 team, hello karthik | grep hello | wc -c
+ 1049  echo hello we41 team, hello karthik | grep hello | wc -w
+ 1050  echo hello we41 team, hello karthik | grep hello
+ 1051  echo hello we41 team, hello karthik > we41file
+ 1052  cat we41file 
+ 1053  echo hello priya > we41file
+ 1054  cat we41file
+ 1055  echo hello karthik >> we41file
+ 1056  cat we41file
+ 1057  echo hello piyush >> we41file
+ 1058  cat we41file
+ 1059  echo hello we39 team > weteamfile
+ 1060  cat weteamfile
+ 1061  echo hello we41 team >> weteamfile
+ 1062  cat weteamfile
+ 1063  echo hello we41 team > weteamfile
+ 1064  cat weteamfile
+ 1065* echo hello we41 team > wenewfile1
+ 1066  cat wenewfile
+ 1067  ls wenewfile1
+ 1068  ls wenewfile
+ 1069  rm wenewfile
+ 1070  ls wenewfile
+ 1071  ls wenewfile1
+ 1072  echo "hello team"
+ 1073  echo "hello team" > wenewfile
+ 1074  ls wenewfile
+ 1075  echo "hello team" >> wenewfile1
+ 1076  ls wenewfile1
+ 1077  cat wenewfile
+ 1078  echo "hello team" > wenewfile.txt
+ 1079  echo "hello team" > wenewfile.csv
+ 1080  echo "hello team" > wenewfile.tsv
+ 1081  echo "hello team" > wenewfile.dat
+ 1082  echo "hello team" > wenewfile.mp3
+ 1083  ls -lrt wenew*
+ 1084  cat wenewfile.txt
+ 1085  cat wenewfile.csv
+ 1086  view wenewfile.txt
+ 1087  echo "1,Supritha,Chennai" > studinfo
+ 1088  cat studinfo
+ 1089  vi studinfo
+ 1090  cat studinfo
+ 1091  cat wenewfile.txt
+ 1092  ls -F | grep -v /
+ 1093  ls -F | grep -v / >listoffiles.txt
+ 1094  vi listoffiles.txt
+ 1095  ls we39_vi_file.txt
+ 1096  vi we39_vi_file.txt
+ 1097  ls
+ 1098  vi listoffiles.txt 
+ 1099  we41_session.lock
+ 1100  touch we41_session.lock
+ 1101  ls -lrt
+ 1102  rm we41_session.lock
+ 1103  touch _SUCCESS
+ 1104  rm _SUCCESS
+ 1105  if [ -f we41_session.lock ]; then echo "already one session is getting executed"; exit; else echo "no session is currently on, lets go with we40 session"; fi
+ 1106  ls -lrt
+ 1107  touch insuranceinfo.csv
+ 1108  ls -lrt
+ 1109  vi listoffiles.txt
+ 1110  touch listoffiles.txt
+ 1111  ls -lrt
+ 1112  echo "" >listoffiles.txt
+ 1113  ls -lrt
+ 1114  echo > file1
+ 1115  ls -lrt
+ 1116  echo >listoffiles.txt
+ 1117  ls -lrt
+ 1118  echo -n >listoffiles.txt
+ 1119  ls -lrt
+ 1120  echo "hello" >listoffiles.txt
+ 1121  ls -lrt
+ 1122* 
+ 1123  ls -lrt
+ 1124  echo "hello" >listoffiles.txt
+ 1125  ls -lrt listoffiles.txt
+ 1126  cat listoffiles.txt
+ 1127  echo -n "hello" >listoffiles.txt
+ 1128  cat listoffiles.txt
+ 1129  echo -n "ho" >listoffiles.txt
+ 1130  ls -lrt listoffiles.txt
+ 1131  cat listoffiles.txt
+ 1132  echo "hello" >listoffiles.txt
+ 1133  ls -lrt listoffiles.txt
+ 1134  cat listoffiles.txt
+ 1135  echo -n "hello" >listoffiles.txt
+ 1136  cat listoffiles.txt
+ 1137  ls -lrt
+ 1138  vi insuranceinfo.csv
+ 1139  cat insuranceinfo.csv
+ 1140  wc -l insuranceinfo.csv
+ 1141  pwd
+ 1142  cd hive/data
+ 1143  cat txns
+ 1144  cat insuranceinfo.csv
+ 1145  cd -
+ 1146  cat insuranceinfo.csv
+ 1147  vi insuranceinfo.csv
+ 1148  cat insuranceinfo.csv
+ 1149  more insuranceinfo.csv
+ 1150  man ls
+ 1151  view insuranceinfo.csv
+ 1152  head insuranceinfo.csv
+ 1153  tail insuranceinfo.csv
+ 1154  head -20 insuranceinfo.csv
+ 1155  tail -20 insuranceinfo.csv
+ 1156  vi file1
+ 1157  cat file1
+ 1158  head file1
+ 1159  head -5 file1
+ 1160  tail -5 file1
+ 1161  head -15 file1
+ 1162  head -15 file1 | tail -6
+ 1163  head -15 file1 | tail -6 file1
+ 1164  head -15 file1 | tail -6
+ 1165  vi file1
+ 1166  wc file1
+ 1167  vi file1
+ 1168  wc file1
+ 1169  wc -c file1
+ 1170  wc -w file1
+ 1171  wc -l file1
+ 1172  ls -lrt
+ 1173  cat we41file
+ 1174  cat studinfo
+ 1175  grep Hyderabad studinfo
+ 1176  grep Hyderabad studinfo | wc -l
+ 1177  grep Chennai studinfo | wc -l
+ 1178  grep Chennai studinfo 
+ 1179  grep Chennai studinfo | wc -l
+ 1180  awk -F',' '{print $3}'
+ 1181  awk -F',' '{print $3}' studinfo
+ 1182  awk -F',' '{print $2}' studinfo
+ 1183  tail -10 insuranceinfo.csv 
+ 1184* sed -i '$d' insuranceinfo.csv
+ 1185* tail -10 insuranceinfo.csv
+ 1186  cat file1
+ 1187  sed '4,10d' file1
+ 1188  cp file1 file2
+ 1189  ls -lrt
+ 1190  cp file1 file2
+ 1191  ls -lrt
+ 1192  date
+ 1193  pwd
+ 1194  cp file1 /tmp/
+ 1195  cp file1 /tmp/file1_hduser
+ 1196  history
+
+ 1247  ls
+ 1248  cd ~
+ 1249  ls
+ 1250  ls -F
+ 1251  ls -F | grep /
+ 1252  ls -F | grep -v /
+ 1253  ls -l
+ 1254  ls -lrt -F
+ 1255  ls -lrtF
+ 1256  ls -lrt -F
+ 1257  ls -lrtF
+ 1258  pwd
+ 1259  cp file1 file1
+ 1260  cp file1 /tmp/file1
+ 1261* 
+ 1262  cp file11 /tmp/
+ 1263  pwd
+ 1264  ls -lrt file11
+ 1265  cp -p file11 /tmp/
+ 1266  mv file11 /tmp/
+ 1267  ls -lrt file11
+ 1268  mv file123 fileonetwothree
+ 1269  pwd
+ 1270  mv fileonetwothree /tmp/
+ 1271  mv file2bkp /tmp/file1bkp
+ 1272  mv file1bkp2 /tmp/file2bkp2
+ 1273  rm file123
+ 1274  ls file1
+ 1275  rm file1
+ 1276  rm /tmp/file11
+ 1277  rm /tmp/file*
+ 1278  ls /tmp/file*
+ 1279  ls file*
+ 1280  cp file* /tmp/
+ 1281  mv file* /tmp/
+ 1282  ls -lrt
+ 1283  pwd
+ 1284  ls /
+ 1285  ls -lrt
+ 1286  ls -lrt /
+ 1287  touch file123
+ 1288  cd /
+ 1289  touch file123
+ 1290  cat /home/hduser/file1
+ 1291  cat /tmp/file1
+ 1292  mkdir /tmp/branch1
+ 1293  cp /tmp/file1 /tmp/branch1/
+ 1294  cat /tmp/branch1/file1
+ 1295  cd /tmp
+ 1296  mkdir incepteztech
+ 1297  mkdir Incepteztech
+ 1298  mkdir Inceptez_tech
+ 1299  mkdir inceptez_tech
+ 1300  mkdir "inceptez tech"
+ 1301  ls -lrt
+ 1302  touch "inceptez tech/file1"
+ 1303  ls -lrt "inceptez tech"
+ 1304  ls -lrt
+ 1305  ls -lrt "inceptez tech"
+ 1306  ls -lrt inceptez\ tech
+ 1307  ls -lrt inceptez tech
+ 1308  cd ~
+ 1309  pwd
+ 1310  ls -lrt
+ 1311  ls -lrt "mohamed irfan"
+ 1312  ls -lrt mohamed\ irfan
+ 1313  ls -lrt /
+ 1314  cd home
+ 1315  pwd
+ 1316  cd /
+ 1317  pwd
+ 1318  cd /home/
+ 1319  ls -lrt
+ 1320  cd hduser
+ 1321  ls -lrt
+ 1322  cd mohamed
+ 1323  pwd
+ 1324  ls -lrt
+ 1325  mkdir we41
+ 1326  mkdir wd28
+ 1327  ls -lrt
+ 1328  cd we41
+ 1329  mkdir senthil
+ 1330  cd senthil/
+ 1331  pwd
+ 1332  cd ..
+ 1333  pwd
+ 1334  mkdir piyush
+ 1335  mkdir saravanan
+ 1336  ls -lrt
+ 1337  pwd
+ 1338  cd /
+ 1339  pwd
+ 1340  ls -lrt /
+ 1341  ls -lrt /home
+ 1342  ls -lrt /
+ 1343  cd /home
+ 1344  ls -lrt
+ 1345  cp /tmp/shahulfile /home/hduser/
+ 1346  touch /homd/hduser/hduserfile
+ 1347  touch /home/hduser/hduserfile
+ 1348  touch /tmp/hduserfile
+ 1349  cd hduser
+ 1350  pwd
+ 1351  ls -lrt
+ 1352  ls
+ 1353  pwd
+ 1354  /usr/bin
+ 1355  /usr/bin/pwd
+ 1356  cd /usr/
+ 1357  ls -lrt
+ 1358  pwd
+ 1359  cd local
+ 1360  ls -lrt
+ 1361  pwd
+ 1362  cd ../bin
+ 1363  ls -lrt hadoop
+ 1364  ls -lrt ../sbin/hadoop
+ 1365  pwd
+ 1366  cd ../local
+ 1367  ls -lrt
+ 1368  cd hadoop
+ 1369  cd bin
+ 1370  pwd
+ 1371  ls -lrt hadoop
+ 1372  pwd
+ 1373  cd ..
+ 1374  ls -lrt
+ 1375  cd logs
+ 1376  ls -lrt
+ 1377  cd /var/log
+ 1378  ls -lrt
+ 1379  pwd
+ 1380  cd /usr/local/spark/bin
+ 1381  ls -lrt
+ 1382  pwd
+ 1383  xyzabcd
+ 1384  beeline
+ 1385  pwd
+ 1386  cd /var
+ 1387  ls -lrt
+ 1388  cd lob
+ 1389  cd log
+ 1390  ls -lrt
+ 1391  pwd
+ 1392  cd /etc
+ 1393  cd /
+ 1394  ls -lrt
+ 1395  pwd
+ 1396  cd etc
+ 1397  pwd
+ 1398  sudo grep shahul sudoers
+ 1399  sudo grep hduser sudoers
+ 1400  sudo vi sudoers
+ 1401  pwd
+ 1402  cd /etc/hosts
+ 1403  cat /etc/hosts
+ 1404  pwd
+ 1405  ping google.com
+ 1406  ls -lrt
+ 1407  cat group
+ 1408  pwd
+ 1409  cat /etc/passwd
+ 1410  grep vinoth /etc/passwd
+ 1411  pwd #present working dir
+ 1412  echo $?
+ 1413  ls irfan
+ 1414  echo $?
+ 1415  cd ~
+ 1416  wc -l file1
+ 1417  wc -l file111
+ 1418  wc -l file1
+ 1419  if [ $? -eq 0 ]; then echo "mail to all - word count is success"; else echo "word count failed"; fi
+ 1420  wc -l file111
+ 1421  if [ $? -eq 0 ]; then echo "mail to all - word count is success"; else echo "word count failed"; fi
+ 1422  pwd
+ 1423  cd /tmp
+ 1424  pwd
+ 1425  cd /home/hduser
+ 1426  pwd
+ 1427  cd -
+ 1428  cd ~
+ 1429  pwd
+ 1430  a=100
+ 1431  echo a
+ 1432  echo $a
+ 1433  myname=irfan
+ 1434  echo myname
+ 1435  echo $myname
+ 1436  cat /file1
+ 1437  cd ~
+ 1438  pwd
+ 1439  cd ~shahul
+ 1440  pwd
+ 1441  cat ~/file1
+ 1442  cd ~
+ 1443  pwd
+ 1444  cd -
+ 1445  cd /tmp
+ 1446  pwd
+ 1447  cd -
+ 1448  pwd
+ 1449  cd -
+ 1450  cat -/file1
+ 1451  cd -
+ 1452  pwd
+ 1453  cd -
+ 1454  pwd
+ 1455  mkdir we41dir
+ 1456  pwd
+ 1457  ls -lrt we41dir
+ 1458  ls -lart we41dir
+ 1459  ls -lrt
+ 1460  mkdir we41dir/irfan
+ 1461  ls -lrt
+ 1462  cd we41dir
+ 1463  ls -lrt
+ 1464  ls -lart
+ 1465  pwd
+ 1466  cd irfan
+ 1467  ls -lrt
+ 1468  pwd
+ 1469  ls -lart
+ 1470  pwd
+ 1471  ls
+ 1472  ./ls
+ 1473  echo hello > file1
+ 1474  cat file1
+ 1475  pwd
+ 1476  ls -lrt
+ 1477  cat file1
+ 1478  cat ./file1
+ 1479  pwd
+ 1480  cd ..
+ 1481  pwd
+ 1482  echo we41file>file1
+ 1483  pwd
+ 1484  cd -
+ 1485  cat file1
+ 1486  cat ../file1
+ 1487  cat ./file1
+ 1488  cat ../file1
+ 1489  pwd
+ 1490  cat ../../file1
+ 1491  cat ../file1
+ 1492  cat file1
+ 1493  cat ./file1
+ 1494  pwd
+ 1495  cd ~
+ 1496  pwd
+ 1497  cd -
+ 1498  pwd
+ 1499  cd /home/hduser
+ 1500  cd -
+ 1501  cd ../..
+ 1502  pwd
+ 1503  cd -
+ 1504  cd ..
+ 1505  pwd
+ 1506  cd -
+ 1507  cd ../../..
+ 1508  pwd
+ 1509  cd -
+ 1510  cd /home
+ 1511  pwd
+ 1512  cd -
+ 1513  ls -lrt
+ 1514  ls -lart
+ 1515  cat ./file1
+ 1516  cat file1
+ 1517  vi ls
+ 1518  ls
+ 1519  chmod 777 ls
+ 1520  ./ls
+ 1521  ls
+ 1522  ./ls
+ 1523  pwd
+ 1524  cd `
+ 1525  cd ~
+ 1526  pwd
+ 1527  cat file1
+ 1528  pwd
+ 1529  cd /tmp
+ 1530  cd /home/hduser
+ 1531  pwd
+ 1532  ls /usr/local/spark/bin/pyspark
+ 1533  ls /usr/local/spark2/bin/pyspark
+ 1534  cd /usr/local/spark2/bin
+ 1535  ls pyspark
+ 1536  pwd
+ 1537  cd /home/hduser
+ 1538  cd dir1
+ 1539  pwd
+ 1540  cd /tmp/dir11
+ 1541  pwd
+ 1542  cd ~
+ 1543  pwd
+ 1544  cd /home/hduser/dir1
+ 1545  cd ~
+ 1546  pwd
+ 1547  cd dir1
+ 1548  pwd
+ 1549  cd ..
+ 1550  mkdir we41dir
+ 1551  rmdir we41dir
+ 1552  rm -r we41dir
+ 1553  mkdir we41dir
+ 1554  pwd
+ 1555* mkdir we41directory
+ 1556  mkdir -p we41directory/dir1/dir2
+ 1557  mkdir -p we41directory/dir1/dir2/dir3
+ 1558  mkdir -p /home/hduser/we41directory/dir1/dir2/dir3
+ 1559  cd /
+ 1560  mkdir -p /home/hduser/we41directory/dir1/dir2/dir3
+ 1561  cd /tmp
+ 1562  mkdir -p /home/hduser/we41directory/dir1/dir2/dir3
+ 1563  rmdir /home/hduser/we41directory/dir1/dir2/dir3
+ 1564  rm -r /home/hduser/we41directory/dir1
+ 1565  pwd
+ 1566  cd ~
+ 1567  mkdir we41directory/dir1
+ 1568  echo hello > we41directory/dir1/file1
+ 1569  chmod 400 we41directory/dir1/file1
+ 1570  echo hello > we41directory/dir1/file2
+ 1571  ls -lrt we41directory/dir1
+ 1572  rm -r we41directory/dir1
+ 1573  ls -lrt we41directory/dir1
+ 1574  mkdir we41directory/dir1
+ 1575  echo hello > we41directory/dir1/file1
+ 1576  chmod 400 we41directory/dir1/file1
+ 1577  echo hello > we41directory/dir1/file2
+ 1578  rm -rf we41directory/dir1
+ 1579  history > we41history
+ 1255  ls -lrt dir1
+ 1256  ls -lrt dir1/dir2
+ 1257  pwd
+ 1258  cp dir1 /tmp/irfandir
+ 1259  cp -r dir1 /tmp/irfandir
+ 1260  mv dir1 dir11
+ 1261  cp -r dir11 /tmp/irfandir
+ 1262  mv dir11 /tmp/
+ 1263  mv dir11 irfandir11
+ 1264  mv irfandir11 dir11
+ 1265  mv dir11 /tmp/irfandir11
+ 1266  sudo useradd uuser
+ 1267  sudo useradd guser
+ 1268  sudo useradd ouser
+ 1269  ls -lrt /home
+ 1270  sudo passwd uuser
+ 1271  sudo passwd guser
+ 1272  sudo passwd ouser
+ 1273  cd /tmp
+ 1274  rm locker.txt
+ 1275  sudo rm locker.txt
+ 1276  ls -lrt /home
+ 1277  sudo usermod -a -G hadoop ouser
+ 1278  sudo usermod -a -g hduser ouser
+ 1279  sudo useradd userwe41
+ 1280  sudo passwd userwe41
+ 1281  id userwe41
+ 1282  sudo usermod -g hadoop userwe41
+ 1283  id userwe41
+ 1284  id dhana
+ 1285  sudo gpasswd -d uuser dhana
+ 1286  sudo gpasswd -d dhana uuser
+ 1287  id dhana
+ 1288  cat uuser.txt
+ 1289  vi uuser.txt
+ 1290  cat uuser.txt
+ 1291  vi uuser.txt
+ 1292  chmod o-rw uuser.txt
+ 1293  sudo chmod o-rw uuser.txt
+ 1294  cat uuser.txt
+ 1295  su userwe41
+ 1296  ls -lrt uuser.txt 
+ 1297  sudo chown uuser:hadoop uuser.txt
+ 1298  ls -lrt uuser.txt 
+ 1299  sudo useradd anagha
+ 1300  sudo gpasswd anagha
+ 1301  su anagha
+ 1302  sudo gpasswd anagha
+ 1303  su anagha
+ 1304  sudo gpasswd anagha
+ 1305  su anagha
+ 1306  sudo useradd rajk
+ 1307  sudo gpasswd rajk
+ 1308  su rajk
+ 1309  sudo usermod -g hadoop rajk
+ 1310  id rajk
+ 1311  history
+ 1312  pwd
+ 1313  ls -lrt
+ 1314  ls -lrt /
+ 1315  sudo mkdir /apps
+ 1316  sudo chmod -R 777 /apps
+ 1317  ls -lrt /
+ 1318  cd /apps
+ 1319  mkdir insure
+ 1320  pwd
+ 1321  ls -lrt
+ 1322  echo hello > insure/file1
+ 1323  ls -lrt
+ 1324  ls -lrt insure
+ 1325  chmod 770 insure
+ 1326  ls -lrt
+ 1327  ls -lrt insure
+ 1328  chmod -R 770 insure
+ 1329  ls -lrt insure
+ 1330  chmod 776 insure
+ 1331  ls -lrt insure
+ 1332  echo hello >insure/file2
+ 1333  ls -lrt insure
+ 1334  mkdir insure/accts
+ 1335  mkdir insure/support
+ 1336  chmod 770 insure/accts
+ 1337  chmod 776 insure/support
+ 1338  ls -lrt insure
+ 1339  chmod 770 insure
+ 1340  chmod 776 insure
+ 1341  chmod 775 insure
+ 1342  ls -lrt insure
+ 1343  ls -lrt 
+ 1344  chmod 775 support
+ 1345  chmod 775 insure/support
+ 1346  chmod -R 775 insure
+ 1347  echo a >> file11
+ 1348  ls -lrt
+ 1349  mkdir dir1
+ 1350  ls -lrt
+ 1351  mkdir apt
+ 1352  ls -lrt
+ 1353  chmod 770 apt
+ 1354  ls -lrt
+ 1355  mkdir apt/flat1
+ 1356  mkdir apt/flat2
+ 1357  ls -lrt
+ 1358  ls -lrt apt/flat1
+ 1359  ls -lrt apt/
+ 1360  chmod -R 770 apt
+ 1361  chmod -R 775 apt
+ 1362  chmod -R 770 apt
+ 1363  chmod 775 apt
+ 1364  chmod -R 775 flat1
+ 1365  chmod -R 775 apt/flat1
+ 1366  chmod 775 apt/flat1
+ 1367  ls -lrt apt
+ 1368  chmod -R 770 apt
+ 1369* 
+ 1370  ls -lrt apt
+ 1371  chmod 775 apt/flat1
+ 1372  ls -lrt apt
+ 1373  chmod -R 770 apt
+ 1374  ls -lrt apt
+ 1375  chmod -r 770 apt
+ 1376  man chmod
+ 1377  df /
+ 1378  df
+ 1379  df -h /
+ 1380  du /home/hduser
+ 1381  du /tmp
+ 1382  du -s /home/hduser
+ 1383  du -s /tmp
+ 1384  du -sh /tmp
+ 1385  du -sh /apps/insure
+ 1386  cp ~/install/apache-hive-2.3.9-bin.tar.gz insure
+ 1387  ls insure
+ 1388  ls -lrt
+ 1389  ls -lrt insure
+ 1390  du -sh /apps/insure
+ 1391  du -h /apps/insure
+ 1392  du -sh /apps/insure
+ 1393  du -h /apps/insure
+ 1394  du -kh /apps/insure/file1
+ 1395  du /apps/insure/
+ 1396  du -k /apps/insure/
+ 1397  ls -lrt
+ 1398  cd insure
+ 1399  ls -lrt
+ 1400  cp ~/hive/data/txns .
+ 1401  ls -lrt
+ 1402  du -h txns
+ 1403  gzip txns
+ 1404  ls -lrt
+ 1405  du -h txns.gz
+ 1406  gunzip txns.gz
+ 1407  du -h txns
+ 1408  compress txns
+ 1409  ls -lrt
+ 1410  du -h txns.Z
+ 1411  uncompress txns
+ 1412  du -h txns
+ 1413  gzip txns
+ 1414  du -h txns
+ 1415  du -h txns.gz
+ 1416  ls -lrt
+ 1417  chmod 777 *
+ 1418  ls -lrt
+ 1419  chmod 700 file*
+ 1420  ls -lrt
+ 1421  vi file1
+ 1422  cd ~
+ 1423  ls -lrt
+ 1424  cat studinfo1
+ 1425  vi studinfo1
+ 1426  grep hyderabad studinfo1
+ 1427  grep Hyderabad studinfo1
+ 1428  grep HyderaBad studinfo1
+ 1429  grep -i hyderabad studinfo1
+ 1430  grep -i hyderabad studinfo1 > hyd.txt
+ 1431  cat hyd.txt
+ 1432  grep -vi hyderabad studinfo1 >nonhyd.txt
+ 1433  cat nohup.out 
+ 1434  cat nonhyd.txt 
+ 1435  grep -vi hyderabad studinfo1
+ 1436  cp studinfo1 studinfo2
+ 1437  cp studinfo1 file2
+ 1438  ls -lrt
+ 1439  grep -i hyderabad *.txt
+ 1440  grep -il hyderabad *.txt
+ 1441  grep -ilv hyderabad *.txt
+ 1442  grep -i hyderabad studinfo1.txt
+ 1443  cat studinfo1.txt 
+ 1444  cat studinfo1
+ 1445  grep -i hyderabad studinfo1
+ 1446  grep -i mohamed studinfo1
+ 1447  grep -iw mohamed studinfo1
+ 1448  grep -i mohamed studinfo1
+ 1449  grep -i mohamed studinfo*
+ 1450  ls -lrt custs
+ 1451  vi custs
+ 1452  grep Accountant custs
+ 1453  grep -l Accountant custs
+ 1454  grep -l Accountantaa custs
+ 1455  grep -n Accountant custs
+ 1456  cd -
+ 1457  ls -lrt
+ 1458  sudo chown dhana txns.gz
+ 1459  ls -lrt
+ 1460  sudo chgrop dhana txns.gz
+ 1461  sudo chgrp dhana txns.gz
+ 1462  ls -lrt
+ 1463  sudo chown hduser:hadoop txns.gz
+ 1464  ls -lrt
+ 1465  pwd
+ 1466  mkdir infana
+ 1467  chmod 777 infana
+ 1468  mkdir infana/abcd
+ 1469  ls -lrt infana
+ 1470  ls -lrt 
+ 1471  chmod -R 700 infana
+ 1472  ls -lrt 
+ 1473  ls -lrt infana
+
+ 1419  chmod 700 file*
+ 1420  ls -lrt
+ 1421  vi file1
+ 1422  cd ~
+ 1423  ls -lrt
+ 1424  cat studinfo1
+ 1425  vi studinfo1
+ 1426  grep hyderabad studinfo1
+ 1427  grep Hyderabad studinfo1
+ 1428  grep HyderaBad studinfo1
+ 1429  grep -i hyderabad studinfo1
+ 1430  grep -i hyderabad studinfo1 > hyd.txt
+ 1431  cat hyd.txt
+ 1432  grep -vi hyderabad studinfo1 >nonhyd.txt
+ 1433  cat nohup.out 
+ 1434  cat nonhyd.txt 
+ 1435  grep -vi hyderabad studinfo1
+ 1436  cp studinfo1 studinfo2
+ 1437  cp studinfo1 file2
+ 1438  ls -lrt
+ 1439  grep -i hyderabad *.txt
+ 1440  grep -il hyderabad *.txt
+ 1441  grep -ilv hyderabad *.txt
+ 1442  grep -i hyderabad studinfo1.txt
+ 1443  cat studinfo1.txt 
+ 1444  cat studinfo1
+ 1445  grep -i hyderabad studinfo1
+ 1446  grep -i mohamed studinfo1
+ 1447  grep -iw mohamed studinfo1
+ 1448  grep -i mohamed studinfo1
+ 1449  grep -i mohamed studinfo*
+ 1450  ls -lrt custs
+ 1451  vi custs
+ 1452  grep Accountant custs
+ 1453  grep -l Accountant custs
+ 1454  grep -l Accountantaa custs
+ 1455  grep -n Accountant custs
+ 1456  cd -
+ 1457  ls -lrt
+ 1458  sudo chown dhana txns.gz
+ 1459  ls -lrt
+ 1460  sudo chgrop dhana txns.gz
+ 1461  sudo chgrp dhana txns.gz
+ 1462  ls -lrt
+ 1463  sudo chown hduser:hadoop txns.gz
+ 1464  ls -lrt
+ 1465  pwd
+ 1466  mkdir infana
+ 1467  chmod 777 infana
+ 1468  mkdir infana/abcd
+ 1469  ls -lrt infana
+ 1470  ls -lrt 
+ 1471  chmod -R 700 infana
+ 1472  ls -lrt 
+ 1473  ls -lrt infana
+ 1474  history
+ 1475  jps
+ 1476  ps -ef | grep rajk
+ 1477  kill -9 44373
+ 1478  ps -ef | grep rajk
+ 1479  kill -9 44562
+ 1480  sudo kill -9 44562
+ 1481  jps
+ 1482  hadoop fs -ls
+ 1483  ps -ef | grep sleep
+ 1484  ps -ef
+ 1485  ps -ef | grep sleep
+ 1486  kill -9 44998
+ 1487  ps -ef | grep sleep
+ 1488  jps
+ 1489  ps 
+ 1490  ps -ef
+ 1491  ps -ef | grep guser
+ 1492  ps -ef | grep sleep
+ 1493  sudo kill -9 45218
+ 1494  ps -ef | grep node
+ 1495  jps
+ 1496  kill -9
+ 1497  cd ~
+ 1498  ls -lrt
+ 1499  cd /tmp
+ 1500  ls -lrt
+ 1501  cat nohup.out
+ 1502  cat log.txt
+ 1503  cat nohup.out
+ 1504  cat log.txt
+ 1505* 
+ 1506  cat log.txt
+ 1507  cat nohup.out
+ 1508  java
+ 1509  python
+ 1510  python3
+ 1511  echo $JAVA_HOME
+ 1512  RECEPTION=/home/hduser/reception
+ 1513  cat $RECEPTION/welcome.txt
+ 1514  echo $RECEPTION
+ 1515  vi sleepscript.sh
+ 1516  ./sleepscript.sh
+ 1517  vi sleepscript.sh
+ 1518  ./sleepscript.sh
+ 1519  echo $RECEPTION
+ 1520  cat ./sleepscript.sh
+ 1521  RECEPTION=/home/hduser/reception
+ 1522  echo $RECEPTION
+ 1523  ./sleepscript.sh
+ 1524  cat $RECEPTION/welcome.txt
+ 1525  export RECEPTION
+ 1526  ./sleepscript.sh
+ 1527  vi shell2.sh
+ 1528  ./shell2.sh
+ 1529  chmod 777 ./shell2.sh
+ 1530  ./shell2.sh
+ 1531  cat ./shell2.sh
+ 1532  ourbatchname=WE41
+ 1533  env | grep RECEPTION
+ 1534  env | grep ourbatchname
+ 1535  export ourbatchname
+ 1536  env | grep ourbatchname
+ 1537  vi ./sleepscript.sh
+ 1538  ./sleepscript.sh
+ 1539  env | grep ourbatchname
+ 1540  ./sleepscript.sh
+ 1541  cd ~
+ 1542  pwd
+ 1543  a=10
+ 1544  vi shell1.sh
+ 1545  chmod 777 shell1.sh
+ 1546  ./shell1.sh
+ 1547  export a
+ 1548  ./shell1.sh
+ 1549  echo 4a
+ 1550  echo $a
+ 1551  pwd
+ 1552  vi .bashrc
+ 1553  echo $a
+ 1554  vi .bashrc
+ 1555  naresh=100000
+ 1556  echo $naresh
+ 1557  vi bonus.sh
+ 1558  chmod 777 bonus.sh
+ 1559  ./bonus.sh
+ 1560  export naresh=100000
+ 1561  echo $naresh
+ 1562  ./bonus.sh
+ 1563  vi .bashrc
+ 1564  java
+ 1565  vi .bashrc
+ 1566  cd /tmp
+ 1567  vi lsl
+ 1568  lsl
+ 1569  mkdir bin
+ 1570  ls bin
+ 1571  rm bin/shahul
+ 1572  sudo rm bin/shahul
+ 1573  cp lsl bin/
+ 1574  sudo rm -r bin
+ 1575  mkdir bin
+ 1576  cp lsl bin/
+ 1577  pwd
+ 1578  cd bin
+ 1579  ls -lrt
+ 1580  chmod 777 lsl
+ 1581  lsl
+ 1582  mv lsl l
+ 1583  l
+ 1584  pwd
+ 1585  mkdir /tmp/irfanbin
+ 1586  mv l /tmp/irfanbin/
+ 1587  cd /tmp/irfanbin
+ 1588  ls -lrt
+ 1589  l
+ 1590  abcde
+ 1591  echo $PATH
+ 1592  l
+ 1593  ls -lrt
+ 1594  vi abcde
+ 1595  chmod 777 abcde
+ 1596  pwd
+ 1597  ls -lrt
+ 1598  pwd
+ 1599  vi irfancmd
+ 1600  chmod 777 irfancmd
+ 1601  pwd
+ 1602  a=100
+ 1603  export a
+ 1604  pwd
+ 1605  a=100
+ 1606  echo $a
+ 1607  vi abc
+ 1608  ./abc
+ 1609  chmod 700 ./abc
+ 1610  ./abc
+ 1611  b=200
+ 1612  echo $b
+ 1613  ./abc
+ 1614  vi ./abc
+ 1615  ./abc
+ 1616  export b
+ 1617  ./abc
+ 1618  vi ~/.bashrc
+ 1619  hadoop fs -ls
+ 1620  hadoop fs -put ~/install/hadoop-2.7.1.tar.gz /user/hduser/
+ 1621  du -h ~/install/hadoop-2.7.1.tar.gz
+ 1622  jps
+ 1623  jps | grep -w NameNode
+ 1624  jps | grep -w NameNode | wc -l
+ 1625  jps | grep -i NameNode
+ 1626  jps | grep -i NameNodejps | grep -i NameNode | grep -v SecondaryNameNode | wc -l
+ 1627  jps | grep -i NameNode | grep -v SecondaryNameNode | wc -l
+ 1628  daemoncnt=jps | grep -i NameNode | grep -v SecondaryNameNode | wc -l
+ 1629  daemoncnt=`jps | grep -i NameNode | grep -v SecondaryNameNode | wc -l`
+ 1630  echo $daemoncnt
+ 1631  jps
+ 1632  jps | grep NameNode
+ 1633  jps | grep NameNode | grep -v SecondaryNameNode
+ 1634  jps | grep NameNode | grep -v SecondaryNameNode | wc -l
+ 1635  echo $?
+ 1636  jps | grep NameNode | grep -v SecondaryNameNode | wc -irfan
+ 1637  echo $?
+ 1638  jps | grep NameNode | grep -v SecondaryNameNode | wc -l
+ 1639  a=`jps | grep NameNode | grep -v SecondaryNameNode | wc -l`
+ 1640  a="jps | grep NameNode | grep -v SecondaryNameNode | wc -l"
+ 1641  echo $a
+ 1642  a=`jps | grep NameNode | grep -v SecondaryNameNode | wc -l`
+ 1643  echo $a
+ 1644  cd ~/install/install_hadoop/
+ 1645  tar xvzf hadoop-2.7.1.tar.gz
+ 1646  sudo rm -r /usr/local/hadoop
+ 1647  echo -e "hduser"
+ 1648  echo "hduser"
+ 1649  echo hduser > file1
+ 1650  ls -lrt file1
+ 1651  man echo
+ 1652  hadoop fs -ls /user
+ 1653  hadoop fs -mkdir /user/guser
+ 1654  hadoop fs -touchz /user/guser/guserfile
+ 1655  hadoop fs -rm -r /user/guser
+ 1656  hadoop fs -mkdir -p /home/guser
+ 1657  hadoop fs -mkdir -p /user/guser
+ 1658  hadoop fs -touchz /user/guser/guserfile
+ 1659  echo $HADOOP_HOME
+ 1660  echo $HADOOP_HOME/etc/hadoop
+ 1661  cat  $HADOOP_HOME/etc/hadoop/core-site.xml
+ 1662  hadoop fs -ls
+ 1663  hadoop fs -ls 
+ 1664  hadoop fs -ls hdfs://localhost:54310
+ 1665  pwd
+ 1666  ls -lrt
+ 1667  hadoop fs -put install_hadoop.sh /user/hduser/
+ 1668  locate hadoop-defaults
+ 1669  locate hadoop-default
+ 1670  locate hdfs-default
+ 1671  vi /usr/local/hadoop/share/doc/hadoop/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
