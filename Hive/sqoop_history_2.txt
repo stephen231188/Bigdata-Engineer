@@ -1,0 +1,155 @@
+1016  ps -ef | grep mysql
+ 1017  mr-jobhistory-daemon.sh start historyserver
+ 1018  jps
+ 1019  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --table customer -m 3 --split-by custid --target-dir /user/hduser/wecustomers2
+ 1020  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --table customer -m 1
+ 1021  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --table customer -m 1 --delete-target-dir
+ 1022  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --table customer -m 2 --split-by custid --delete-target-dir
+ 1023  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --table customer -m 1 --delete-target-dir
+ 1024  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --table customer -m 2 --delete-target-dir
+ 1025  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --table customer -m 2 --delete-target-dir --split-by custid
+ 1026  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --table customer -m 2 --delete-target-dir
+ 1027  sqoop eval --connect jdbc:mysql://localhost:3306/custdb --querey "select * from customer"
+ 1028  sqoop eval --connect jdbc:mysql://localhost:3306/custdb --query "select * from customer"
+ 1029  sqoop eval --connect jdbc:mysql://localhost:3306/custdb --username root --password Root123$--query "select * from customer"
+ 1030  sqoop eval --connect jdbc:mysql://localhost:3306/custdb --username root --password Root123$ --query "select * from customer"
+ 1031  sqoop eval --connect jdbc:mysql://localhost:3306/custdb --username root --password Root123$ --query "select * from customer limit 4"
+ 1032  sqoop import --connect jdbc:mysql://localhost:3306/custdb --username root --password Root123$
+ 1033  sqoop import --connect jdbc:mysql://localhost:3306/custdb --username root --password Root123$ --table customer -m 1
+ 1034  sqoop import --connect jdbc:mysql://localhost:3306/custdb --username root --password Root123$ --Table customer -m 1
+ 1035  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --delete-target-dir --table customer -m 1 --target-dir /user/hduser/custdata1
+ 1036  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --delete-target-dir --table customer  --target-dir /user/hduser/custdata1
+ 1037  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --delete-target-dir --table customer  --target-dir /user/hduser/custdata1 --split-by custid
+ 1038  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --delete-target-dir --table customer  --target-dir /user/hduser/custdata1 --split-by city
+ 1039  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --delete-target-dir --table customer  --target-dir /user/hduser/custdata1 --split-by age
+ 1040  hadoop fs -ls /user/hduser/custdata1
+ 1041  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --table customer -m 1 --delete-target-dir \
+ 1042  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --query "select * from customer where \$CONDITIONS" -m 1
+ 1043* sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ -query "select * from customer where \$CONDITIONS" -m 1 --target-dir /user/hduser/cust1234 --delete-target-dir
+ 1044  sqoop import --connect jdbc:mysql://127.0.0.1:3306/custdb --username root --password Root123$ --query "select * from customer where \$CONDITIONS" -m 1 -target-dir /user/hduser/cust12345
+ 1045  sqoop list-databases --connect jdbc:mysql://localhost/ --username root --password Root123$
+ 1046  sqoop list-tables --connect jdbc:mysql://localhost/custdb --username root --password Root123$
+ 1047  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table customer -m 1 --delete-target-dir
+ 1048  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table customer -m 1 --delete-target-dir --driver com.mysql.cj.jdbc.Driver
+ 1049  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 1 --delete-target-dir
+ 1050* sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 1 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct 
+ 1051* sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ -table customer -m 2 --driver com.mysql.cj.jdbc.Driver --split-by custid
+ 1052  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P -table customer -m 3 --split-by custid --target-dir sqoop_import --delete-target-dir --direct --driver com.mysql.cj.jdbc.Driver;
+ 1053  hadoop fs -ls /user/hduser/sqoop_import/
+ 1054  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P -table customer -m 3 --split-by custid --target-dir sqoop_import_kalyani --direct --driver com.mysql.cj.jdbc.Driver;
+ 1055  hadoop fs -ls /user/hduser/sqoop_import_kalyani
+ 1056* sqoop import --connect jdbc:mysql://localhost/custdb --username root -P -table customer -m 3 --split-by custid --target-dir sqoop_import_kalyani --direct --driver com.mysql.cj.jdbc.Driver --append
+ 1057  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P -table customer -m 3 --split-by custid --target-dir sqoop_import_kalyani --driver com.mysql.cj.jdbc.Driver;
+ 1058  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P -table customer -m 3 --split-by custid --target-dir sqoop_import_kalyani --driver com.mysql.cj.jdbc.Driver --delete-target-dir;
+
+ 1189  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --boundary-query "select min(custid), max(custid) from customer_master" --query 'Select a.custid master_custid,a.firstname,a.age,a.city,b.custid detail_custid,a.createdt,a.fulladdress,category,transactiondt,transactamt from customer_master a join customer_details b on a.custid=b.custid WHERE $CONDITIONS' --split-by t1.master_custid --target-dir cust_details --null-non-string '0' --null-string 'NA' --compress --direct --num-mappers 3 --fetch-size 3000 --delete-target-dir --driver com.mysql.cj.jdbc.Driver;
+ 1190  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --boundary-query "select min(custid), max(custid) from customer_master" --query 'Select a.custid master_custid,a.firstname,a.age,a.city,b.custid detail_custid,a.createdt,a.fulladdress,category,transactiondt,transactamt from customer_master a join customer_details b on a.custid=b.custid WHERE $CONDITIONS' --split-by t1.master_custid --target-dir cust_details --null-non-string '0' --null-string 'NA' --compress --direct --num-mappers 3 --fetch-size 3000 --delete-target-dir --driver com.mysql.cj.jdbc.Driver
+ 1191  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --boundary-query "select min(custid), max(custid) from customer_master" --query 'Select a.custid master_custid,a.firstname,a.age,a.city,b.custid detail_custid,a.createdt,a.fulladdress,category,transactiondt,transactamt from customer_master a join customer_details b on a.custid=b.custid WHERE $CONDITIONS' --split-by master_custid --target-dir cust_details --null-non-string '0' --null-string 'NA' --compress --direct --num-mappers 3 --fetch-size 3000 --delete-target-dir --driver com.mysql.cj.jdbc.Driver
+ 1192  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --boundary-query "select min(custid), max(custid) from customer_master" --query 'Select a.custid master_custid,a.firstname,a.age,a.city,b.custid detail_custid,a.createdt,a.fulladdress,category,transactiondt,transactamt from customer_master a join customer_details b on a.custid=b.custid WHERE $CONDITIONS' --split-by a.custid --target-dir cust_details --null-non-string '0' --null-string 'NA' --compress --direct --num-mappers 3 --fetch-size 3000 --delete-target-dir --driver com.mysql.cj.jdbc.Driver
+ 1193  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table customer -m 1 --target-dir /user/hduser/custwe41 --delete-target-dir
+ 1194  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 1 --target-dir /user/hduser/custwe41 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct
+ 1195  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 1 --target-dir /user/hduser/custwe41 --driver com.mysql.cj.jdbc.Driver --direct
+ 1196  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 2 --target-dir /user/hduser/custwe41 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct
+ 1197  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 2 --target-dir /user/hduser/custwe41 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --split-by custid
+ 1198  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 2 --target-dir /user/hduser/custwe41 --append --driver com.mysql.cj.jdbc.Driver --direct --split-by custid
+ 1199  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hr --append --driver com.mysql.cj.jdbc.Driver --direct --split-by custid
+ 1200  hadoop fs -ls /user/hduser/custwe41hr
+ 1201  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hr --append --driver com.mysql.cj.jdbc.Driver --direct --split-by custid
+ 1202  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata --append --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --where "createdt='2023-02-25' and hr=7"
+ 1203  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata --append --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --where "createdt='2023-02-25' and hr=8"
+ 1204  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata7 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --where "createdt='2023-02-25' and hr=7"
+ 1205  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata8 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --where "createdt='2023-02-25' and hr=8"
+ 1206  sqoop job --create banujob -- import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --incremental append --check-column custid --last-value 0
+ 1207  while true; sqoop job --exec banujob; sleep 120; echo "job completed"; done
+ 1208  while true; do ; sqoop job --exec banujob; sleep 120; echo "job completed"; done
+ 1209  while true; do sqoop job --exec banujob; sleep 120; echo "job completed"; done
+ 1210  sqoop job --create banujob1 -- import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 2 --target-dir /user/hduser/custwe41minutedata --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --incremental append --check-column custid --last-value 0
+ 1211  sqoop job --exec banujob1
+ 1212  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 1 --target-dir /user/hduser/custwe41hrdata9 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --where "createdt='2023-02-25' and hr=9"
+ 1213* sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata9 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --query "select * from customer " --split-by custid --fetch-size 10000
+ 1214  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 --columns "custid,city,transactamt" --where "city='chennai' and createdt='2023-02-25' and hr=10"
+ 1215  sqoop eval --connect jdbc:mysql://localhost/custdb --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') group by city,hr"
+ 1216  sqoop eval --connect jdbc:mysql://localhost/custdb --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') group by city,hr" --username root --password Root123$
+ 1217  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') group by city,hr" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 
+ 1218  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') and \$CONDITIONS group by city,hr" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 
+ 1219  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select * from customer" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 
+ 1220  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select * from customer where $CONDITIONS" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 
+ 1221  CONDITIONS=1
+ 1222* sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select * from customer where \$CONDITIONS" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 
+ 1223  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select * from customer" -m 2 --target-dir /user/hduser/custwe41tmp --delete-target-dir --driver com.mysql.cj.jdbc.Driver --split-by custid
+ 1224* sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --query "select * from customer where \$CONDITIONS" -m 2 --target-dir /user/hduser/custwe41tmp --delete-target-dir --driver com.mysql.cj.jdbc.Driver --split-by custid 
+ 1225  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') and \$CONDITIONS group by city,hr" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 --fields-terminated-by "~"
+ 1226  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') and \$CONDITIONS group by city,hr" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 --fields-terminated-by "~" --lines-terminated-by "-"
+ 1227  history
+
+ 1194  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 1 --target-dir /user/hduser/custwe41 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct
+ 1195  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 1 --target-dir /user/hduser/custwe41 --driver com.mysql.cj.jdbc.Driver --direct
+ 1196  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 2 --target-dir /user/hduser/custwe41 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct
+ 1197  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 2 --target-dir /user/hduser/custwe41 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --split-by custid
+ 1198  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 2 --target-dir /user/hduser/custwe41 --append --driver com.mysql.cj.jdbc.Driver --direct --split-by custid
+ 1199  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hr --append --driver com.mysql.cj.jdbc.Driver --direct --split-by custid
+ 1200  hadoop fs -ls /user/hduser/custwe41hr
+ 1201  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hr --append --driver com.mysql.cj.jdbc.Driver --direct --split-by custid
+ 1202  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata --append --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --where "createdt='2023-02-25' and hr=7"
+ 1203  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata --append --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --where "createdt='2023-02-25' and hr=8"
+ 1204  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata7 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --where "createdt='2023-02-25' and hr=7"
+ 1205  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata8 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --where "createdt='2023-02-25' and hr=8"
+ 1206  sqoop job --create banujob -- import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --incremental append --check-column custid --last-value 0
+ 1207  while true; sqoop job --exec banujob; sleep 120; echo "job completed"; done
+ 1208  while true; do ; sqoop job --exec banujob; sleep 120; echo "job completed"; done
+ 1209  while true; do sqoop job --exec banujob; sleep 120; echo "job completed"; done
+ 1210  sqoop job --create banujob1 -- import --connect jdbc:mysql://localhost/custdb --username root -P --table customer -m 2 --target-dir /user/hduser/custwe41minutedata --driver com.mysql.cj.jdbc.Driver --direct --split-by custid --incremental append --check-column custid --last-value 0
+ 1211  sqoop job --exec banujob1
+ 1212  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 1 --target-dir /user/hduser/custwe41hrdata9 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --where "createdt='2023-02-25' and hr=9"
+ 1213* sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 2 --target-dir /user/hduser/custwe41hrdata9 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --query "select * from customer " --split-by custid --fetch-size 10000
+ 1214  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --table customer_hr -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 --columns "custid,city,transactamt" --where "city='chennai' and createdt='2023-02-25' and hr=10"
+ 1215  sqoop eval --connect jdbc:mysql://localhost/custdb --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') group by city,hr"
+ 1216  sqoop eval --connect jdbc:mysql://localhost/custdb --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') group by city,hr" --username root --password Root123$
+ 1217  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') group by city,hr" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 
+ 1218  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') and \$CONDITIONS group by city,hr" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 
+ 1219  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select * from customer" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 
+ 1220  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select * from customer where $CONDITIONS" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 
+ 1221  CONDITIONS=1
+ 1222* sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select * from customer where \$CONDITIONS" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 
+ 1223  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select * from customer" -m 2 --target-dir /user/hduser/custwe41tmp --delete-target-dir --driver com.mysql.cj.jdbc.Driver --split-by custid
+ 1224  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --query "select * from customer where \$CONDITIONS" -m 2 --target-dir /user/hduser/custwe41tmp --delete-target-dir --driver com.mysql.cj.jdbc.Driver --split-by custid
+ 1225  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') and \$CONDITIONS group by city,hr" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 --fields-terminated-by "~"
+ 1226  sqoop import --connect jdbc:mysql://localhost/custdb --username root -P --query "select city,hr,sum(transactamt) from customer_hr where city in ('chennai','manglore') and \$CONDITIONS group by city,hr" -m 1 --target-dir /user/hduser/custwe41hrdata10 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --direct --fetch-size 10000 --fields-terminated-by "~" --lines-terminated-by "-"
+ 1227  history
+ 1228  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --query "select * from customer where \$CONDITIONS" -m 2 --target-dir /user/hduser/custwe41tmp --delete-target-dir --driver com.mysql.cj.jdbc.Driver --split-by custid
+ 1229  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --query "select * from customer where \$CONDITIONS" -m 2 --target-dir /user/hduser/custwe41tmp --delete-target-dir --driver com.mysql.cj.jdbc.Driver --split-by custid --fields-terminated-by '~'
+ 1230  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --query "select * from customer where \$CONDITIONS" -m 2 --target-dir /user/hduser/custwe41tmp1 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --split-by custid
+ 1231  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --query "select * from customer where \$CONDITIONS" -m 2 --target-dir /user/hduser/custwe41tmp --delete-target-dir --driver com.mysql.cj.jdbc.Driver --split-by custid
+ 1232  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --query "select * from customer where \$CONDITIONS" -m 2 --target-dir /user/hduser/custwe41tmp2 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --split-by custid --fields-terminated-by '~'
+ 1233  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --query "select * from customer where \$CONDITIONS" -m 2 --target-dir /user/hduser/custwe41tmp2 --delete-target-dir --driver com.mysql.cj.jdbc.Driver --split-by custid --fields-terminated-by '~' --direct
+ 1234  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table customer -m 1 --target-dir /user/hduser/custwe41_ins --append --driver com.mysql.cj.jdbc.Driver --where "custid>0"
+ 1235  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table customer -m 1 --target-dir /user/hduser/custwe41_ins --append --driver com.mysql.cj.jdbc.Driver --where "custid>6"
+ 1236  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table customer -m 1 --target-dir /user/hduser/custwe41_ins --driver com.mysql.cj.jdbc.Driver --incremental append --check-column custid --last-value 0
+ 1237  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table customer -m 1 --target-dir /user/hduser/custwe41_ins --driver com.mysql.cj.jdbc.Driver --incremental append --check-column custid --last-value 6
+ 1238  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table customer -m 1 --target-dir /user/hduser/custwe41_ins --driver com.mysql.cj.jdbc.Driver --incremental append --check-column custid --last-value 8
+ 1239  sqoop job --create we41_incr_app_job1 -- import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table customer -m 1 --target-dir /user/hduser/custwe41_ins --driver com.mysql.cj.jdbc.Driver --incremental append --check-column custid --last-value 0
+ 1240  sqoop job --list
+ 1241* SCHEDULER & ORCHESTRATION -> CRON, OOZIE, AIRFLOW, CLOUD COMPOSER
+ 1242  sqoop job --exec we41_incr_app_job1
+ 1243  cd .sqoop
+ 1244  vi metastore.db.script
+ 1245  ls -lrt
+ 1246  vi metastore.db.script
+ 1247  sqoop job --exec we41_incr_app_job1
+ 1248  vi metastore.db.script
+ 1249  sqoop job --exec we41_incr_app_job1
+ 1250  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_ins --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-26 11:48:29'
+ 1251  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-26 11:48:29'
+ 1252  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-26 11:52:50'
+ 1253  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-26 11:52:50' --append
+ 1254  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-26 11:52:50' --merge-key custid
+ 1255  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-26 12:00:50' --merge-key custid
+ 1256  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-26 12:00:50' --append
+ 1257  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-26 12:00:50' --merge-key custid
+ 1258  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-25 12:00:00' --merge-key custid
+ 1259  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-25 00:00:00' --merge-key custid
+ 1260  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-26 12:37:09' --append
+ 1261  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_insupd --driver com.mysql.cj.jdbc.Driver --incremental lastmodified --check-column update_ts --last-value '2023-02-26 12:42:25' --merge-key custid
+ 1262  sqoop import --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --target-dir /user/hduser/custwe41_append --driver com.mysql.cj.jdbc.Driver --append
+ 1263  sqoop export --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table cust_upd_we41 -m 1 --driver com.mysql.cj.jdbc.Driver --export-dir /user/hduser/custdata --columns custid,city
+ 1264  sqoop export --connect jdbc:mysql://localhost/custdb --username root --password Root123$ --table customer_hdfs --export-dir customer --driver com.mysql.cj.jdbc.Driver
